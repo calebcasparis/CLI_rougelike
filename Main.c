@@ -2,7 +2,7 @@
 #include <sys/ioctl.h>
 #include <stdlib.h>
 #include <unistd.h>	//for sleep only
-#include "RougeLikeHeaders.c"
+#include "Headers.c"
 #include "OverworldFunctions.c"
 #include "MapFunctions.c"
 
