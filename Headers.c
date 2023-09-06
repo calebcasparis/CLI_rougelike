@@ -19,6 +19,7 @@
 	unsigned char treasure_y;
         unsigned char stair_x;
         unsigned char stair_y;
+	unsigned char floor;
         unsigned char map_lvl;
 };
 
