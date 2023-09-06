@@ -1,5 +1,5 @@
 void map_Init(unsigned char floors_cleared, struct Map *current_map_data,
-              char current_map_layout[10][10])
+              char current_map_layout[][11])
 {
         //srand(time(NULL));
         unsigned char r = (rand() /256);
@@ -29,7 +29,7 @@ void map_Init(unsigned char floors_cleared, struct Map *current_map_data,
         	current_map_data->treasure_y = r4/27;
 	}
 	else {
-		current_map_data->treasure_x = NULL;
-        	current_map_data->treasure_y = NULL;
+		current_map_data->treasure_x = 10;
+        	current_map_data->treasure_y = 1;
 	}
 }

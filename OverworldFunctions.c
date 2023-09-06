@@ -14,7 +14,7 @@ char item_Indexer(unsigned char treasure_number)
 
 void move_MC(int mv_dir, struct Actor *mc,
              struct Map *current_map_data,
-             char current_map_layout[10][10])
+             char current_map_layout[][11])
 {
         switch(mv_dir) {
 /*UP*/		case 1:
@@ -78,7 +78,7 @@ void move_MC(int mv_dir, struct Actor *mc,
 	}
 }
 
-void interact(struct Actor * mc, struct Map * current_map_data, char current_map_layout[10][10])
+void interact(struct Actor * mc, struct Map * current_map_data, char current_map_layout[][11])
 {
 	if (mc->front_pos_x == current_map_data->treasure_x &&
 	    mc->front_pos_y == current_map_data->treasure_y) {
@@ -86,8 +86,8 @@ void interact(struct Actor * mc, struct Map * current_map_data, char current_map
 		getchar();
 		system("clear");
 		current_map_layout[current_map_data->treasure_y][current_map_data->treasure_x] = '.';
-		current_map_data->treasure_x = NULL;
-		current_map_data->treasure_y = NULL;
+		current_map_data->treasure_x = 11;
+		current_map_data->treasure_y = 2;
 	}
 	if (mc->front_pos_x == current_map_data->stair_x &&
             mc->front_pos_y == current_map_data->stair_y) {
@@ -101,4 +101,3 @@ void interact(struct Actor * mc, struct Map * current_map_data, char current_map
 		system("clear");
 	}
 }
-

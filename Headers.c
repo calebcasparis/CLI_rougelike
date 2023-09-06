@@ -8,13 +8,13 @@
         unsigned char pos_y;
 	unsigned char front_pos_x;
 	unsigned char front_pos_y;
-        int dir;
+        unsigned char dir;
         char *name;
  };
 
  struct Map {
-        int enemy_number;
-        int treasure_number;
+        unsigned char enemy_number;
+        unsigned char treasure_number;
 	unsigned char treasure_x;
 	unsigned char treasure_y;
         unsigned char stair_x;

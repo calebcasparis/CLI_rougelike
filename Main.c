@@ -10,12 +10,11 @@ int main()
 {
 	unsigned char floors_cleared = 0;
 	struct Map current_map_data;
-	char current_map_layout[10][10];
+	char current_map_layout[11][11];
 	map_Init(floors_cleared, &current_map_data, current_map_layout);
 
 	struct Actor mc;
 
-	mc.name = (char *) malloc(5);
 	mc.pos_x =  5;
 	mc.pos_y = 5;
 	mc.dir = 'v';
