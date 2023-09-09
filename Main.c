@@ -19,7 +19,7 @@ int main()
 	mc.dir = 'v';
 	mc.front_pos_x = mc.pos_x;
         mc.front_pos_y = mc.pos_y + 1;
-	current_map_data.floor = ' ';
+	current_map_data.floor = '.';
 
 	map_Init(floors_cleared, &current_map_data, current_map_layout, &mc);
 
@@ -63,6 +63,9 @@ int main()
                 }
 		else if (c == '/') {
 			interact(&mc, &current_map_data, current_map_layout);
+		}
+		else if (c == '.') {
+			inventory();
 		}
 		else if (c == 'h') {
 			help();
